@@ -8,6 +8,18 @@ export default function Entrepreneurs() {
 const [showAll,setShowAll]=useState(false);
 const [search,setSearch]=useState("");
 
+const entrepreneurImages = {
+"Ramesh Tailor": new URL("../assets/entrepreneurs/ramesh-tailor.jpg", import.meta.url).href,
+"Suresh Potter": new URL("../assets/entrepreneurs/Suresh-Potter.jpg", import.meta.url).href,
+"Anita Artisan": new URL("../assets/entrepreneurs/anita-artist.jpg", import.meta.url).href,
+"Rahul Cobbler": new URL("../assets/entrepreneurs/rahul-cobbler.jpg", import.meta.url).href,
+"Priya Saree Maker": new URL("../assets/entrepreneurs/priya-saree-maker.jpg", import.meta.url).href,
+"Neha Jewelry Artist": new URL("../assets/entrepreneurs/Neha-Jewelry-Artist.jpg", import.meta.url).href,
+"Amit Bamboo Crafts": new URL("../assets/entrepreneurs/amit-bamboo-crafts.jpg", import.meta.url).href,
+"Rohan Furniture Maker": new URL("../assets/entrepreneurs/rohan-furniture-maker.jpg", import.meta.url).href,
+};
+
+
 const entrepreneurs=[
 
 {
@@ -177,7 +189,7 @@ Expert
 </div>
 
 <img
-src={item.image}
+src={entrepreneurImages[item.name]}
 alt={item.name}
 />
 

@@ -139,7 +139,10 @@ NEW
 </div>
 
 <img
-src={`/src/assets/categories/${item.name}.jpg`}
+src={new URL(
+`../assets/categories/${item.name.toLowerCase()}.jpg`,
+import.meta.url
+).href}
 alt={item.name}
 />
 

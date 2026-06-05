@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+const bookingBanner =
+new URL("../assets/services/booking-banner.jpg", import.meta.url).href;
+
 export default function ServiceBooking() {
 
 const [name,setName] = useState("");
@@ -59,7 +62,7 @@ Connect with trusted local professionals and book services instantly.
 <div className="booking-image-section">
 
 <img
-src="/src/assets/services/booking-banner.jpg"
+src={bookingBanner}
 alt="Service Booking"
 />
 

@@ -12,18 +12,18 @@ const [showAll, setShowAll] = useState(false);
 const [filterHighPrice, setFilterHighPrice] = useState(false);
 
 const productImages = {
-"Handmade Pot":"/src/assets/products/handmade-pot.jpg",
-"Wooden Chair":"/src/assets/products/wooden-chair.jpg",
-"Traditional Saree":"/src/assets/products/traditional-saree.jpg",
-"Handmade Clay Pot":"/src/assets/products/handmade-clay-pot.jpg",
-"Traditional Wall Art":"/src/assets/products/traditional-wall-art.jpg",
-"Handwoven Bag":"/src/assets/products/handwoven-bag.jpg",
-"Custom Tailor Suit":"/src/assets/products/custom-tailor-suit.jpg",
-"Leather Sandals":"/src/assets/products/leather-sandals.jpg",
-"Wooden Handicraft":"/src/assets/products/wooden-handicraft.jpg",
-"Decorative Pottery Set":"/src/assets/products/decorative-pottery-set.jpg",
-"Handmade Jewelry":"/src/assets/products/handmade-jewelry.jpg",
-"Eco-Friendly Bamboo Basket":"/src/assets/products/eco-friendly-bamboo-basket.jpg",
+"Handmade Pot": new URL("../assets/products/handmade-pot.jpg", import.meta.url).href,
+"Wooden Chair": new URL("../assets/products/wooden-chair.jpg", import.meta.url).href,
+"Traditional Saree": new URL("../assets/products/traditional-saree.jpg", import.meta.url).href,
+"Handmade Clay Pot": new URL("../assets/products/handmade-clay-pot.jpg", import.meta.url).href,
+"Traditional Wall Art": new URL("../assets/products/traditional-wall-art.jpg", import.meta.url).href,
+"Handwoven Bag": new URL("../assets/products/handwoven-bag.jpg", import.meta.url).href,
+"Custom Tailor Suit": new URL("../assets/products/custom-tailor-suit.jpg", import.meta.url).href,
+"Leather Sandals": new URL("../assets/products/leather-sandals.jpg", import.meta.url).href,
+"Wooden Handicraft": new URL("../assets/products/wooden-handicraft.jpg", import.meta.url).href,
+"Decorative Pottery Set": new URL("../assets/products/decorative-pottery-set.jpg", import.meta.url).href,
+"Handmade Jewelry": new URL("../assets/products/handmade-jewelry.jpg", import.meta.url).href,
+"Eco-Friendly Bamboo Basket": new URL("../assets/products/eco-friendly-bamboo-basket.jpg", import.meta.url).href,
 };
 
 useEffect(() => {
@@ -149,7 +149,7 @@ New
 <img
 src={
 productImages[item.name] ||
-"/src/assets/products/handmade-pot.jpg"
+new URL("../assets/products/handmade-pot.jpg", import.meta.url).href
 }
 alt={item.name}
 />

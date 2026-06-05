@@ -4,6 +4,17 @@ import Footer from "../components/Footer";
 import Reviews from "../components/Reviews";
 import { Link, useParams } from "react-router-dom";
 
+const entrepreneurImages = {
+"Ramesh Tailor": new URL("../assets/entrepreneurs/ramesh-tailor.jpg", import.meta.url).href,
+"Suresh Potter": new URL("../assets/entrepreneurs/Suresh-Potter.jpg", import.meta.url).href,
+"Anita Artisan": new URL("../assets/entrepreneurs/anita-artist.jpg", import.meta.url).href,
+"Rahul Cobbler": new URL("../assets/entrepreneurs/rahul-cobbler.jpg", import.meta.url).href,
+"Priya Saree Maker": new URL("../assets/entrepreneurs/priya-saree-maker.jpg", import.meta.url).href,
+"Neha Jewelry Artist": new URL("../assets/entrepreneurs/Neha-Jewelry-Artist.jpg", import.meta.url).href,
+"Amit Bamboo Crafts": new URL("../assets/entrepreneurs/amit-bamboo-crafts.jpg", import.meta.url).href,
+"Rohan Furniture Maker": new URL("../assets/entrepreneurs/rohan-furniture-maker.jpg", import.meta.url).href,
+};
+
 export default function EntrepreneurProfile(){
 
 const {id}=useParams();
@@ -99,7 +110,7 @@ return(
 <div className="product-image-section">
 
 <img
-src={person.image}
+src={entrepreneurImages[person.name]}
 alt={person.name}
 />
 
@@ -191,7 +202,7 @@ Related Entrepreneurs
 <div className="product-card">
 
 <img
-src="/src/assets/entrepreneurs/Suresh-Potter.jpg"
+src={entrepreneurImages["Suresh Potter"]}
 alt=""
 />
 
@@ -216,7 +227,7 @@ View Profile
 <div className="product-card">
 
 <img
-src="/src/assets/entrepreneurs/anita-artist.jpg"
+src={entrepreneurImages["Anita Artisan"]}
 alt=""
 />
 

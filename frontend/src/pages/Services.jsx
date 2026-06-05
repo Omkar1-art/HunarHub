@@ -12,16 +12,16 @@ const [showAll, setShowAll] = useState(false);
 const [filterPrice, setFilterPrice] = useState(false);
 
 const serviceImages = {
-"Embroidery Service":"/src/assets/services/embroidery-service.jpg",
-"Tailoring":"/src/assets/services/tailoring.jpg",
-"Potter Service":"/src/assets/services/potter-service.jpg",
-"Artisan Service":"/src/assets/services/artisan-service.jpg",
-"Cobbler Service":"/src/assets/services/cobbler-service.jpg",
-"Jewelry Repair":"/src/assets/services/jewelry-repair.jpg",
-"Bamboo Craft":"/src/assets/services/bamboo-craft.jpg",
-"Wooden Furniture":"/src/assets/services/wooden-furniture.jpg",
-"Handloom Weaving":"/src/assets/services/handloom-weaving.jpg",
-"Metal Craft":"/src/assets/services/metal-craft.jpg"
+"Embroidery Service": new URL("../assets/services/embroidery-service.jpg", import.meta.url).href,
+"Tailoring": new URL("../assets/services/tailoring.jpg", import.meta.url).href,
+"Potter Service": new URL("../assets/services/potter-service.jpg", import.meta.url).href,
+"Artisan Service": new URL("../assets/services/artisan-service.jpg", import.meta.url).href,
+"Cobbler Service": new URL("../assets/services/cobbler-service.jpg", import.meta.url).href,
+"Jewelry Repair": new URL("../assets/services/jewelry-repair.jpg", import.meta.url).href,
+"Bamboo Craft": new URL("../assets/services/bamboo-craft.jpg", import.meta.url).href,
+"Wooden Furniture": new URL("../assets/services/wooden-furniture.jpg", import.meta.url).href,
+"Handloom Weaving": new URL("../assets/services/handloom-weaving.jpg", import.meta.url).href,
+"Metal Craft": new URL("../assets/services/metal-craft.jpg", import.meta.url).href
 };
 
 useEffect(() => {
@@ -151,7 +151,7 @@ New
 <img
 src={
 serviceImages[item.service_name] ||
-"/src/assets/services/tailoring.jpg"
+new URL("../assets/services/tailoring.jpg", import.meta.url).href
 }
 alt={item.service_name}
 />
