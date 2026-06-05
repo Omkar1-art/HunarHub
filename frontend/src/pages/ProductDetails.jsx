@@ -29,7 +29,7 @@ const productImages = {
 useEffect(() => {
 
 axios
-.get(`https://heartfelt-communication-production-d7be.up.railway.app/api/products/${id}`)
+.get(`https://hunarhubap-production.up.railway.app/products/${id}`)
 .then((res) => {
 setProduct(res.data);
 })
@@ -44,7 +44,7 @@ const handleBuyNow = async () => {
 try {
 
 await axios.post(
-"https://heartfelt-communication-production-d7be.up.railway.app/api/orders",
+"https://hunarhubap-production.up.railway.app/api/orders",
 {
 user_id:1,
 product_id:id,

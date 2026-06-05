@@ -27,7 +27,7 @@ const serviceImages = {
 useEffect(() => {
 
 axios
-.get("https://heartfelt-communication-production-d7be.up.railway.app/api/services")
+.get("https://hunarhubap-production.up.railway.app/api/services")
 .then((res)=>{
 setServices(res.data);
 })

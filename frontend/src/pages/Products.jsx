@@ -29,7 +29,7 @@ const productImages = {
 useEffect(() => {
 
 axios
-.get("https://heartfelt-communication-production-d7be.up.railway.app/api/products")
+.get("https://hunarhubap-production.up.railway.app/api/products")
 .then((res) => {
 setProducts(res.data);
 })

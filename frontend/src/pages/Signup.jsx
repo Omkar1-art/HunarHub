@@ -22,7 +22,7 @@ export default function Signup() {
 
       const response =
       await axios.post(
-      "https://heartfelt-communication-production-d7be.up.railway.app/api/signup",
+      "https://hunarhubap-production.up.railway.app/api/signup",
       {
         name,
         email,
