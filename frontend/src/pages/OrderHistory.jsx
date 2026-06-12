@@ -18,7 +18,7 @@ useState("");
 useEffect(() => {
 
 axios
-.get("https://hunarhubap-production.up.railway.app/api/orders")
+.get(" https://backend-sigma-five-50.vercel.app/api/orders")
 .then((res)=>{
 setOrders(res.data);
 })

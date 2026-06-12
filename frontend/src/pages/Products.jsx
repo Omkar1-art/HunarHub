@@ -29,7 +29,7 @@ const productImages = {
 useEffect(() => {
 
 axios
-.get("https://hunarhubap-production.up.railway.app/api/products")
+.get("https://backend-sigma-five-50.vercel.app/api/products")
 .then((res) => {
 setProducts(res.data);
 })

@@ -27,20 +27,20 @@ export default function AdminDashboard() {
 
   const fetchProducts = () => {
     axios
-      .get("https://hunarhubap-production.up.railway.app/api/products")
+      .get(" https://backend-sigma-five-50.vercel.app/api/products")
       .then((res) => setProducts(res.data));
   };
 
   const fetchServices = () => {
     axios
-      .get("https://hunarhubap-production.up.railway.app/api/services")
+      .get(" https://backend-sigma-five-50.vercel.app/api/services")
       .then((res) => setServices(res.data));
   };
 
   const addProduct = async () => {
 
     await axios.post(
-      "https://hunarhubap-production.up.railway.app/api/products",
+      " https://backend-sigma-five-50.vercel.app/api/products",
       productData
     );
 
@@ -58,7 +58,7 @@ export default function AdminDashboard() {
   const deleteProduct = async (id) => {
 
     await axios.delete(
-      `https://hunarhubap-production.up.railway.app/api/products/${id}`
+      ` https://backend-sigma-five-50.vercel.app/api/products/${id}`
     );
 
     alert("Product Deleted");
@@ -69,7 +69,7 @@ export default function AdminDashboard() {
   const addService = async () => {
 
     await axios.post(
-      "https://hunarhubap-production.up.railway.app/api/services",
+      " https://backend-sigma-five-50.vercel.app/api/services",
       serviceData
     );
 
@@ -87,7 +87,7 @@ export default function AdminDashboard() {
   const deleteService = async (id) => {
 
     await axios.delete(
-      `https://hunarhubap-production.up.railway.app/api/services/${id}`
+      ` https://backend-sigma-five-50.vercel.app/api/services/${id}`
     );
 
     alert("Service Deleted");

@@ -27,7 +27,7 @@ const serviceImages = {
 useEffect(() => {
 
 axios
-.get("https://hunarhubap-production.up.railway.app/api/services")
+.get("https://backend-sigma-five-50.vercel.app/api/services")
 .then((res)=>{
 setServices(res.data);
 })
