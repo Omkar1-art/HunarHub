@@ -12,7 +12,7 @@ The goal of HunarHub is to increase digital visibility, improve customer reach, 
 
 Millions of micro-entrepreneurs possess valuable skills but lack digital presence and customer reach. Most rely on traditional word-of-mouth marketing and local foot traffic, limiting their growth and earning potential.
 
-HunarHub addresses this challenge by providing a digital marketplace where customers can discover local talent, purchase handmade products, and request services directly.
+HunarHub solves this by creating a digital marketplace where customers can discover local talent, buy handmade products, and book services directly.
 
 ---
 
@@ -21,23 +21,22 @@ HunarHub addresses this challenge by providing a digital marketplace where custo
 ### Customer Features
 
 * User Registration and Login
-* Browse Entrepreneurs by Category
-* Search and Filter Services
+* Browse Products and Services
+* Search and Filter Options
 * View Entrepreneur Profiles
 * Purchase Handmade Products
-* Place Service Requests
+* Book Local Services
 * Order History Management
 * Ratings and Feedback
 
 ### Entrepreneur Features
 
 * Profile Management
-* Service Listing Management
 * Product Listing Management
+* Service Listing Management
 * Order Management
-* Service Request Management
 * Availability Management
-* Earnings Overview
+* Earnings Tracking
 
 ### Admin Features
 
@@ -66,7 +65,7 @@ HunarHub addresses this challenge by providing a digital marketplace where custo
 
 ### Database
 
-* MySQL
+* MySQL (Railway Database)
 
 ### Authentication
 
@@ -76,7 +75,8 @@ HunarHub addresses this challenge by providing a digital marketplace where custo
 ### Deployment
 
 * Frontend: Vercel
-* Backend: Railway
+* Backend: Vercel
+* Database: Railway MySQL
 
 ---
 
@@ -90,6 +90,7 @@ HunarHub
 │   ├── controllers
 │   ├── routes
 │   ├── server.js
+│   ├── vercel.json
 │   └── package.json
 │
 ├── frontend
@@ -101,6 +102,7 @@ HunarHub
 │   │
 │   ├── index.html
 │   ├── vite.config.js
+│   ├── vercel.json
 │   └── package.json
 │
 └── README.md
@@ -136,15 +138,18 @@ npm start
 
 ## Environment Variables
 
-Create a `.env` file inside the backend directory and configure:
+Create a `.env` file inside the backend directory:
 
 ```env
-MYSQLHOST=your_host
-MYSQLUSER=your_user
-MYSQLPASSWORD=your_password
-MYSQLDATABASE=your_database
-MYSQLPORT=your_port
+MYSQL_PUBLIC_URL=your_mysql_connection_url
 JWT_SECRET=your_secret_key
+```
+
+Example:
+
+```env
+MYSQL_PUBLIC_URL=mysql://username:password@host:port/database
+JWT_SECRET=mysecretkey
 ```
 
 ---
@@ -159,21 +164,44 @@ https://github.com/Omkar1-art/HunarHub
 
 https://frontend-smoky-six-39.vercel.app/
 
-### Backend Deployment
+### Backend API
 
-https://hunarhubap-production.up.railway.app/
+https://backend-sigma-five-50.vercel.app/
+
+---
+
+## API Endpoints
+
+### Products
+
+```bash
+GET /api/products
+```
+
+### Services
+
+```bash
+GET /api/services
+```
+
+### Authentication
+
+```bash
+POST /api/login
+POST /api/register
+```
 
 ---
 
 ## Future Enhancements
 
-* Mobile Application Support
 * Online Payment Integration
-* Wallet System
+* Mobile Application Support
 * Delivery Tracking
+* Wallet System
 * AI-Based Recommendations
-* Skill Training Modules
 * Certification System
+* Skill Training Modules
 
 ---
 
