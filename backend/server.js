@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const orderRoutes = require("./routes/orderRoutes");
 const serviceRoutes = require("./routes/serviceRoutes");
 const productRoutes = require("./routes/productRoutes");
@@ -10,6 +12,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 app.use("/api", authRoutes);
 app.use("/api", productRoutes);
 app.use("/api", serviceRoutes);
